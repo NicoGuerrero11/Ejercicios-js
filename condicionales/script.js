@@ -94,6 +94,38 @@ let calificacion = Number(prompt("ingrese una calificacion '1 al 10': "));
 // En caso de no disponer del topping solicitado por el usuario, el programa le indicará 
 // “no tenemos este topping, lo sentimos.” y a continuación le informará el precio del helado sin ningún topping.
 
+console.log("Helado con toppings\n\n");
+console.log("1 - oreo - $10");
+console.log("2 - KitKat - $15");
+console.log("3 - Brownie -$20");
+console.log("4 - sin topping - $50");
+console.log("\n\n");
+
+let helado = prompt("seleccione el topping que gusta: ").toLowerCase();
+let costo = 50;
+
+switch(helado){
+    case "oreo":
+        console.log("elegiste el topping de oreo");
+        console.log(`El costo es de ${costo + 10} mxn`);
+        break;
+    case "kitkat":
+        console.log("elegiste el topping de Kit Kat");
+        console.log(`el costo es de ${costo + 15} mxn`);
+        break;
+    case "brownie":
+        console.log("elegiste el topping de Brownie");
+        console.log(`el costo es de ${costo + 20} mxn`);
+        break;
+    case "sin topping":
+        console.log("elegiste sin topping");
+        console.log(`el costo es de ${costo} mxn`);
+        break;
+    default:
+        console.log("lo lamento no contamos con ese topping");
+        console.log(`tu precio queda en ${costo} `);
+        break;
+}
 
 
 
