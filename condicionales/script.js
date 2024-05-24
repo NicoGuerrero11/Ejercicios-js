@@ -1,4 +1,4 @@
-/* // 1. Solicitar al usuario que responda a la pregunta (“¿Eres bellisimo/a?”), en caso de contestar sí, responder “Ciertamente”, en caso de contestar no, responder: “No te creo”.
+// 1. Solicitar al usuario que responda a la pregunta (“¿Eres bellisimo/a?”), en caso de contestar sí, responder “Ciertamente”, en caso de contestar no, responder: “No te creo”.
 let bello = prompt("eres bellisimo/a? ");
 if(bello == "si"){
     console.log("ciertamente");
@@ -84,7 +84,7 @@ let calificacion = Number(prompt("ingrese una calificacion '1 al 10': "));
     console.log("bien");
 }else{
     console.log("excelente");
-} */
+} 
 
 // 9. Escribe un programa que responda a un usuario que quiere comprar un helado en una conocida marca de comida rápida cuánto le costará en función del topping que elija.
 // El helado sin topping cuesta 50 MXN.
@@ -139,15 +139,60 @@ switch(helado){
 // Beca Facebook: 20% de descuento.
 // Beca Google: 15% de descuento.
 // Beca Jesua: 50% de descuento.
-// Finalmente, además del precio mensual con descuento, indicar al usuario cuánto gastaría en total por el curso elegido, tomando en cuenta las siguientes duraciones:
+// Finalmente, además del precio mensual con descuento, indicar al usuario cuánto gastaría en total por el curso elegido,
+// tomando en cuenta las siguientes duraciones:
 // Course: 2 meses
 // Carrera 6 meses
 // Master: 12 meses
 
+const course = 4999 * 2;
+const carrera = 3999 * 6;
+const master = 2999 * 12;
+
+function descuento(i){
+    console.log("becas\n");
+    console.log("Beca Facebook: 20% de descuento.");
+    console.log("Beca Google: 15% de descuento.");
+    console.log("Beca Jesua: 50% de descuento.");
+    console.log("sin beca");
+    console.log("\n\n");
+    let beca = prompt("seleccione beca: ").toLowerCase();
+
+    if (beca == "facebook"){
+        console.log(`el pago total incluyendo la beca es de: ${ i * 0.8} mxn `);
+    }else if(beca == "google"){
+        console.log(`el pago total incluyendo la beca es de: ${i * 0.85} mxn `);
+    }else if(beca == "jesua"){
+        console.log(`el pago total incluyendo la beca es de: ${i * 0.5} mxn `);
+    }else{
+        console.log("no selecciono ninguna beca");
+        console.log(`su total de pago es de ${i} mxn`);
+    }
+}
+
+console.log("cursos\n");
+console.log("course");
+console.log("carrera");
+console.log("master");
+console.log("\n\n");
+
+let programa = prompt("que tipo de programa quiere realizar: ");
+
+switch(programa){
+    case "course":
+        console.log("selecciono course");
+        descuento(course);
+        break;
+    case "carrera":
+        console.log("selecciono carrera");
+        descuento(carrera);
+        break;
+    case "master":
+        console.log("selecciono master");
+        descuento(master);
+        break;
+}
 
 
 
-// 11. Realizar un programa que ayude a calcular el total a pagar de acuerdo a la distancia recorrida por un vehículo con cargo extra por los litros consumidos, tomando en consideración lo siguiente:
-// Si el vehículo es “coche”, el precio kilometro ha de ser 0.20, si es “moto” ha de ser 0.10 y si es “autobús” 0.5.
-// Si los litros consumidos están entre 0 y 100 se ha de añadir 5 al costo total, si es mayor la cantidad de litros consumidos se ha de añadir 10 al total. Considere qué:
-// total a pagar = (precio kilometro x kms recorridos) + extra por litros consumidos.
+
