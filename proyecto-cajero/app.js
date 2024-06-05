@@ -27,23 +27,12 @@ const inicioSesion = (e) => {
         }
     }
     alert("usuario o password incorrecta");
+    
 }
-
-
-
-// consultar saldo
-const saldo = () => {
-    alert("funciona");
-}
-
-
-// depositar monto
-
-
-// retirar monto
-
-
-
-
 btn.addEventListener('click', inicioSesion);
-botonSaldo.addEventListener('click', saldo);
+
+
+
+
+
+
